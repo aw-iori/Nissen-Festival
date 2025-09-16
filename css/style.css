@@ -1,0 +1,44 @@
+@charset "UTF-8";
+div.content{
+    width: 1210px;
+    padding: 65px 0;
+    margin: 0 auto;
+    border-radius: 50px;
+    background: rgba(76, 107, 158, 0.70);
+}
+article.greeting{
+    width: 1080px;
+    margin:  0 auto;
+    border-radius: 30px;
+    background: #25344D;
+}
+.greeting section{
+    margin: 0 100px;
+    padding: 100px 0;
+    display: grid;
+    grid-template-areas: "img name"
+                         "comment comment";
+    grid-template-columns: 1fr 1fr;
+}
+.greeting img{
+    grid-area: img;
+}
+.greeting h2{
+    margin: auto;
+    font-size: 48px;
+    font-weight: 700;
+    color: #DBE9FF;
+    grid-area: name;
+}
+.greeting p{
+    margin: 80px 0 0 0;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2.4px;
+    line-height: 185%; 
+    color: #DBE9FF;
+    grid-area: comment;
+}
+p.greeting_comment3{
+    letter-spacing: 1.6px;
+}
