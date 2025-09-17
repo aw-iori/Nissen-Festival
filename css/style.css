@@ -1,4 +1,9 @@
 @charset "UTF-8";
+body{
+    background-image: url(../img/back_img.png);
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+}
 div.content{
     width: 1210px;
     padding: 65px 0;
