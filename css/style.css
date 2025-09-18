@@ -166,14 +166,14 @@ div.content {
     background: rgba(76, 107, 158, 0.70);
 }
 
-article.greeting {
+div.frame {
     width: 1080px;
     margin: 0 auto;
     border-radius: 30px;
     background: #25344D;
 }
 
-.greeting section {
+section.greeting_content {
     margin: 0 100px;
     padding: 100px 0;
     display: grid;
@@ -182,11 +182,11 @@ article.greeting {
     grid-template-columns: 1fr 1fr;
 }
 
-.greeting img {
+img.greeting_img {
     grid-area: img;
 }
 
-.greeting h2 {
+h2.greeting_name {
     margin: auto;
     font-size: 48px;
     font-weight: 700;
@@ -194,7 +194,7 @@ article.greeting {
     grid-area: name;
 }
 
-.greeting p {
+p.greeting_comment {
     margin: 80px 0 0 0;
     font-size: 20px;
     font-weight: 500;
@@ -206,4 +206,68 @@ article.greeting {
 
 p.greeting_comment3 {
     letter-spacing: 1.6px;
+}
+
+.creator .creator_top {
+    margin: 54px;
+}
+
+.creator h2 {
+    margin: 0 0 54px 0;
+    color: #DBE9FF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.creator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.creator_grid {
+    padding: 75.58px 50px 75.58px 50px;
+    margin: 0 0 150px 0;
+    width: 842px;
+    height: 520px;
+    background-color: #FFF;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px 0 rgba(121, 88, 255, 0.30);
+    display: grid;
+    grid-template-areas: "creatorimg creatorh3"
+        "creatorimg creatorp";
+    grid-template-columns: 419px 1fr;
+    grid-template-rows: 112px auto;
+    align-items: start;
+}
+
+.creator_grid h3 {
+    margin: 0;
+    color: #093D8A;
+    font-family: "Noto Sans JP";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    grid-area: creatorh3;
+}
+
+.creator_grid img {
+    grid-area: creatorimg;
+}
+
+.creator_grid p {
+    margin: 0;
+    color: #093D8A;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    grid-area: creatorp;
 }
