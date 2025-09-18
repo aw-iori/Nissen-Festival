@@ -1,52 +1,220 @@
 @charset "UTF-8";
-body{
+
+body {
+    margin: 0;
     background-image: url(../img/back_img.png);
     background-size: 100% auto;
     background-repeat: repeat-y;
 }
-div.content{
+
+header {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding: 0 80px 0 100px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background: rgba(125, 151, 198, 0.90);
+    position: fixed;
+}
+
+/* TOPページ */
+
+.background_image {
+    margin: auto 15.6%;
+    width: 67%;
+    height: 5%;
+    flex-shrink: 0;
+}
+
+ul {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    gap: 200px;
+    flex-shrink: 0;
+}
+
+.pc-nav-active {
+    display: flex;
+    width: 48px;
+    height: 29px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.pc-nav-li {
+    display: flex;
+    width: 74px;
+    height: 29px;
+    padding-right: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.pc-nav-li1 {
+    display: flex;
+    width: 122px;
+    height: 29px;
+    padding-right: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.section_date and time {
+    display: flex;
+    width: 1079px;
+    height: 744px;
+    padding: 50px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+    flex-shrink: 0;
+}
+
+.btn__container {
+    display: flex;
+    width: 1080px;
+    height: 83px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+}
+
+.btn--gradation {
+    display: flex;
+    width: 245px;
+    height: 60px;
+    padding: 10px 30px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 36px;
+    border: 3px solid var(--_, #093D8A);
+    background: linear-gradient(95deg, #BAE4ED 0.86%, #FCFFEE 100.78%);
+}
+
+a {
+    width: 144px;
+    flex-shrink: 0;
+    color: var(--_, #093D8A);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;
+}
+
+.section_SNS {
+    display: flex;
+    height: 558px;
+    padding: 50px 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    border-radius: 20px;
+    background: #9FD1D5;
+
+    /* 10*10_70% */
+    box-shadow: -10px 10px 20px 0 rgba(0, 0, 0, 0.40);
+}
+
+.SNS_container {
+    display: flex;
+    width: 297px;
+    height: 524px;
+    padding: 100px 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background: #D4FDEF;
+}
+
+.section_shop {
+    display: flex;
+    width: 1080px;
+    height: 1295px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.dodai {
+    width: 280.059px;
+    height: 128.491px;
+    flex-shrink: 0;
+    fill: #668695;
+    stroke-width: 5px;
+    stroke: #3E474B;
+}
+
+/* ご挨拶と制作者紹介の枠 */
+
+div.content {
     width: 1210px;
     padding: 65px 0;
     margin: 0 auto;
     border-radius: 50px;
     background: rgba(76, 107, 158, 0.70);
 }
-div.frame{
+
+div.frame {
     width: 1080px;
-    margin:  0 auto;
+    margin: 0 auto;
     border-radius: 30px;
     background: #25344D;
 }
-section.greeting_content{
+
+/* ご挨拶ページ */
+
+section.greeting_content {
     margin: 0 100px;
     padding: 100px 0;
     display: grid;
     grid-template-areas: "img name"
-                         "comment comment";
+        "comment comment";
     grid-template-columns: 1fr 1fr;
 }
-img.greeting_img{
+
+img.greeting_img {
     grid-area: img;
 }
-h2.greeting_name{
+
+h2.greeting_name {
     margin: auto;
     font-size: 48px;
     font-weight: 700;
     color: #DBE9FF;
     grid-area: name;
 }
-p.greeting_comment{
+
+p.greeting_comment {
     margin: 80px 0 0 0;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 2.4px;
-    line-height: 185%; 
+    line-height: 185%;
     color: #DBE9FF;
     grid-area: comment;
 }
-p.greeting_comment3{
+
+p.greeting_comment3 {
     letter-spacing: 1.6px;
 }
+
+/* 制作者紹介ページ */
 
 .creator .creator_top {
     margin: 54px;
@@ -72,7 +240,7 @@ p.greeting_comment3{
 
 .creator_grid {
     padding: 75.58px 50px 75.58px 50px;
-    margin: 0 0 150px 0;
+    margin: 0 0 60px 0;
     width: 842px;
     height: 520px;
     background-color: #FFF;
