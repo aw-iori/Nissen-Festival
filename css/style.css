@@ -19,6 +19,8 @@ header {
     position: fixed;
 }
 
+/* TOPページ */
+
 .background_image {
     margin: auto 15.6%;
     width: 67%;
@@ -158,6 +160,8 @@ a {
     stroke: #3E474B;
 }
 
+/* ご挨拶と制作者紹介の枠 */
+
 div.content {
     width: 1210px;
     padding: 65px 0;
@@ -172,6 +176,8 @@ div.frame {
     border-radius: 30px;
     background: #25344D;
 }
+
+/* ご挨拶ページ */
 
 section.greeting_content {
     margin: 0 100px;
@@ -207,6 +213,8 @@ p.greeting_comment {
 p.greeting_comment3 {
     letter-spacing: 1.6px;
 }
+
+/* 制作者紹介ページ */
 
 .creator .creator_top {
     margin: 54px;
