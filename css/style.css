@@ -80,7 +80,7 @@ p.greeting_comment3{
     box-shadow: 0 2px 10px 0 rgba(121, 88, 255, 0.30);
     display: grid;
     grid-template-areas: "creatorimg creatorh3"
-        "creatorimg creatorp";
+                         "creatorimg creatorp";
     grid-template-columns: 419px 1fr;
     grid-template-rows: 112px auto;
     align-items: start;
