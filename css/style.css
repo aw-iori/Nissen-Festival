@@ -11,13 +11,13 @@ div.content{
     border-radius: 50px;
     background: rgba(76, 107, 158, 0.70);
 }
-article.greeting{
+div.frame{
     width: 1080px;
     margin:  0 auto;
     border-radius: 30px;
     background: #25344D;
 }
-.greeting section{
+section.greeting_content{
     margin: 0 100px;
     padding: 100px 0;
     display: grid;
@@ -25,17 +25,17 @@ article.greeting{
                          "comment comment";
     grid-template-columns: 1fr 1fr;
 }
-.greeting img{
+img.greeting_img{
     grid-area: img;
 }
-.greeting h2{
+h2.greeting_name{
     margin: auto;
     font-size: 48px;
     font-weight: 700;
     color: #DBE9FF;
     grid-area: name;
 }
-.greeting p{
+p.greeting_comment{
     margin: 80px 0 0 0;
     font-size: 20px;
     font-weight: 500;
