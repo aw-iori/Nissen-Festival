@@ -79,6 +79,7 @@ video {
     outline: 0;
     vertical-align: baseline;
     background: transparent;
+
 }
 
 article,
@@ -96,131 +97,69 @@ section {
     margin: 0;
 }
 
-header {
-    width: 1280px;
-    height: 50px;
-    padding: 0 80px 0 30px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-logo {
-    width: 33%;
-    max-width: 180px;
-    position: fixed;
-    left: 3%;
-    top: 20px;
-    z-index: 15;
-    filter: drop-shadow(0px 2px 5px #47499c);
-}
-
-.fixedbox {
-    width: 100%;
-    height: 100px;
-    background: rgba(125, 151, 198, 0.90);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    z-index: 10;
-}
-
-.pc-nav {
-    position: fixed;
-    font-size: 20px;
-    z-index: 16;
-    width: 50%;
-    margin-left: 50%;
-    font-weight: 700;
-}
-
-.pc-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 37px 0;
-
-}
-
-.pc-nav ul li a {
-    text-decoration: none;
-    color: #3655a1;
-    opacity: 1;
-}
-
-.pc-nav .pc-nav-active a {
-    color: #ffb22f;
-    font-weight: 800;
-}
-
-.pc-nav li.pc-nav-li:hover a {
-    opacity: 0.4;
-}
-
 body {
     margin: 0;
-    background-image: url(../img/back_img.png);
+    background-color: #FFDDBA;
     background-size: 100% auto;
     background-repeat: repeat-y;
 }
 
-
-
-/* TOPページ */
-
-.background_image {
-    margin: auto 15.6%;
-    width: 67%;
-    height: 5%;
-    flex-shrink: 0;
-}
-
-ul {
+header {
+    width: -webkit-fill-available;
+    height: 72px;
+    background: rgba(239, 131, 42, 0.90);
     display: flex;
-    max-width: 100%;
-    align-items: center;
-    gap: 200px;
-}
-
-
-.section_date and time {
-    display: flex;
-    width: 1079px;
-    height: 744px;
-    padding: 50px;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 40px;
-    flex-shrink: 0;
-}
-
-.btn__container {
-    display: flex;
-    width: 1080px;
-    height: 83px;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-
-}
-
-.btn--gradation {
-    display: flex;
-    width: 245px;
-    height: 60px;
-    padding: 10px 30px;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
-    border-radius: 36px;
-    border: 3px solid var(--_, #093D8A);
-    background: linear-gradient(95deg, #BAE4ED 0.86%, #FCFFEE 100.78%);
+    padding: 0 80px 0 30px;
+    position: fixed;
+    top: 0;
+}
+
+.header-logo {
+    width: 10%;
+    max-width: 180px;
+    position: fixed;
+    left: 5%;
+    top: 10px;
+    z-index: 15;
+}
+
+.pc-nav {
+    display: block;
+}
+
+.pc-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 50px;
+}
+
+.pc-nav li {
+    margin-left: 20px;
+}
+
+.pc-nav a {
+    text-decoration: none;
+    font-family: "Noto Sans JP";
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.pc-nav-active a {
+    color: #B15237;
+}
+
+.pc-nav:hover {
+    color: #fff;
 }
 
 a {
-    width: 144px;
+    width: 200px;
     flex-shrink: 0;
-    color: var(--_, #093D8A);
+    color: var(--_, #ffffff);
     text-align: center;
     font-family: "Noto Sans JP";
     font-size: 20px;
@@ -230,52 +169,646 @@ a {
     letter-spacing: 0.6px;
 }
 
+.phone-only {
+    display: none;
+}
+
+
+/* TOPページ */
+
+/* キービジュアル */
+.background_image {
+    margin: auto 15.6%;
+    width: 67%;
+    height: 5%;
+    flex-shrink: 0;
+}
+
+/* 5W1H */
+.card {
+    background-image: url(../img/wave.png);
+    padding: 50px;
+    width: 55%;
+    height: 644px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    gap: 40px;
+    color: #FFF;
+    margin: 200px 19%;
+
+}
+
+.label {
+    color: #FFF;
+    font-family: "Noto Sans JP";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.section-datetime {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    align-self: stretch;
+}
+
+.dates-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.date-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    position: relative;
+}
+
+.month {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    display: inline-block;
+}
+
+.month span {
+    color: #00bfff;
+}
+
+.month slot {
+    color: #E2E198;
+}
+
+.day {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 50px;
+    margin-top: 0;
+    margin-left: 10px;
+    border: 2px solid transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.date-item:first-child .day {
+    background-color: #3158A3;
+    border-color: #A3D8FF;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.date-item:last-child .day {
+    background-color: #E2E198;
+    border-color: #FFF;
+    color: #61623A;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.time {
+    font-size: 1.25rem;
+    margin-top: 5px;
+    text-shadow: none;
+}
+
+.location-details {
+    align-self: center;
+}
+
+.main-location {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.note {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 36px */
+}
+
+strong {
+    color: #FFF;
+    font-family: "Noto Sans JP";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.buildings {
+    color: #FFF;
+    font-family: "Noto Sans JP";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+/* 開催にあたって */
+.held {
+    margin: 200px 100px;
+}
+
+.section_held {
+    display: flex;
+    margin: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    border-radius: 20px;
+}
+
+.button_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    background: #B15237;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button_container:hover {
+    background-color: #ffffff;
+    border: 2px solid #EF832A;
+    color: #EF832A;
+}
+
+/* 展示・出店 */
+.ExhibitionsandStores {
+    margin: 200px 100px;
+}
+
+.section_ExhibitionsandStores {
+    /* width: 1000px; */
+    height: 1045px;
+    padding: 50px 100px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: -10px 10px 20px 0 rgba(0, 0, 0, 0.40);
+}
+
+.Exhibitions_container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 89px;
+    width: 100%;
+    margin-bottom: 26px;
+}
+
+.Exhibitions_img {
+    height: 354px;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.Exhibitions_button {
+    display: flex;
+    width: 150px;
+    height: 350px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 10px;
+    border-bottom: 5px solid #5B291B;
+    border-left: 5px solid #5B291B;
+    background: #FFDDBA;
+    box-shadow: -3px 3px 12px 0 rgba(0, 0, 0, 0.30);
+}
+
+.feeling {
+    color: #000;
+    font-family: VDL-PenLetter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%;
+    /* 56px */
+}
+
+.Exhibitions_button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.Exhibitions_button button {
+    display: flex;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    background: #EF832A;
+    box-shadow: 0 4px 0 #C6732E;
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #FFF;
+}
+
+.Exhibitions_button button.active {
+    background-color: #AFCAD7;
+}
+
+.Stores_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 1070px;
+    height: 632px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: #B15237;
+    overflow-y: auto;
+}
+
+.storeopeningcard {
+    display: flex;
+    flex-direction: column;
+    width: 239px;
+    height: 510px;
+    margin: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+}
+
+/* .name {}
+
+.description {} */
+
+.summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.location {
+    display: flex;
+    height: 26px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 5px;
+    background: var(--_, #093D8A);
+}
+
+.building {
+    display: flex;
+    height: 26px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 5px;
+    background: var(--_, #093D8A);
+}
+
+/*公式SNS*/
+.SNS {
+    display: grid;
+    margin: 150px 200px;
+    gap: 50px;
+}
+
 .section_SNS {
     display: flex;
-    height: 558px;
     padding: 50px 100px;
     justify-content: center;
     align-items: center;
     gap: 80px;
     border-radius: 20px;
-    background: #9FD1D5;
-
-    /* 10*10_70% */
+    background: #ffffff;
     box-shadow: -10px 10px 20px 0 rgba(0, 0, 0, 0.40);
+}
+
+.insuta {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: linear-gradient(201deg, #7638FA 0%, #D300C5 25%, #FF0069 50%, #FF7A00 75%, #FFD600 100%);
 }
 
 .SNS_container {
     display: flex;
     width: 297px;
     height: 524px;
-    padding: 100px 25px;
+    padding: 20px 25px;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    gap: 35px;
     border-radius: 20px;
-    background: #D4FDEF;
+    background: #FFDDBA;
 }
 
-.section_shop {
+.SNS_text {
+    color: #B15237;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 200%;
+}
+
+.button_container_SNS {
+    position: relative;
     display: flex;
-    width: 1080px;
-    height: 1295px;
-    padding-bottom: 50px;
-    flex-direction: column;
-    justify-content: flex-end;
+    width: 70%;
+    height: 60px;
+    padding: 10px 40px;
+    justify-content: space-around;
     align-items: center;
-    gap: 24px;
     flex-shrink: 0;
-    border-radius: 10px;
+    border-radius: 35px;
+    border: 3px solid #B15237;
+    background: #FFF;
 }
 
-.dodai {
-    width: 280.059px;
-    height: 128.491px;
+.button_SNS {
+    width: 110px;
     flex-shrink: 0;
-    fill: #668695;
-    stroke-width: 5px;
-    stroke: #3E474B;
+    color: #B15237;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.icon {
+    /* position: absolute; で親要素内の絶対配置に */
+    position: absolute;
+    right: -20px;
+    bottom: -25px;
+    margin: 5px;
+}
+
+.serihu {
+    position: relative;
+    z-index: 1;
+    /* マスコットより前面に表示 */
+    transform-origin: bottom left;
+    /* 左下を基準に拡大縮小 */
+    /* アニメーションの定義 */
+    animation: talk 1.5s infinite;
+}
+
+
+.masukotto {
+    display: flex;
+    width: 240px;
+    height: 75px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #32783E;
+}
+
+.kyara {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.name {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%;
+}
+
+/*ゲストトークショー*/
+.guests {
+    margin: 150px 200px;
+}
+
+.section_guest {
+    display: flex;
+    height: 580px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: -10px 10px 20px 0 rgba(0, 0, 0, 0.40);
+}
+
+/*実行委員会企画*/
+.executivecommittee {
+    margin: 150px 200px;
+}
+
+.section_executivecommittee {
+    height: 580px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: -10px 10px 20px 0 rgba(0, 0, 0, 0.40);
+}
+
+.section__precautions-content {
+    display: flex;
+    padding: 50px 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 55px;
+    flex-shrink: 0;
+    background: #B15237;
+}
+
+.section__precautions-list {
+    color: #DBE9FF;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.section__precautions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+samp {
+    color: #F8FF69;
+    font-family: "Noto Sans JP";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 175%;
+}
+
+.section__precautions-heading {
+    color: #DBE9FF;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 175%;
+}
+
+footer {
+    background-color: #B15237;
+    background-image: url(../img/back_img.png);
+    color: #fff;
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo,
+.footer-menu,
+.footer-info {
+    flex: 1;
+}
+
+.footer-logo {
+    flex: 2;
+}
+
+.footer-logo img {
+    width: 250px;
+    /* 画像のサイズに合わせて調整 */
+    margin-bottom: 20px;
+}
+
+.official-link,
+.social-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 5px 0;
+}
+
+.social-link i {
+    margin-right: 10px;
+}
+
+.footer-menu ul,
+.footer-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li,
+.footer-info li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a,
+.footer-info a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a:hover,
+.footer-info a:hover {
+    color: #aaa;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 50px;
 }
 
 /* ご挨拶と制作者紹介の枠 */
@@ -366,7 +899,7 @@ p.greeting_comment3 {
     box-shadow: 0 2px 10px 0 rgba(121, 88, 255, 0.30);
     display: grid;
     grid-template-areas: "creatorimg creatorh3"
-                         "creatorimg creatorp";
+        "creatorimg creatorp";
     grid-template-columns: 419px 1fr;
     grid-template-rows: 112px auto;
     align-items: start;
@@ -396,56 +929,4 @@ p.greeting_comment3 {
     font-weight: 400;
     line-height: 150%;
     grid-area: creatorp;
-}
-
-.section__precautions-content {
-    width: 95%;
-    margin-inline: auto;
-    display: flex;
-    padding: 30px 57px 30px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: #3655a1;
-}
-
-.section__precautions-container {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    height: 600px;
-
-}
-
-.section__precautions-attention {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.section__precautions-heading {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 150%;
-    /* 24px */
-    letter-spacing: 0.48px;
-}
-
-.section__precautions-list {
-    padding-left: 20px;
-    padding-right: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.section__precautions-item {
-    /* list-style: disc; */
-}
-
-.section__precautions-item a {
-    color: #ffffff;
 }
