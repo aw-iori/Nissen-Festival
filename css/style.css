@@ -608,7 +608,7 @@ strong {
 /*公式SNS*/
 .SNS {
     display: grid;
-    margin: 150px 200px;
+    margin: 150px 18%;
     gap: 50px;
 }
 
@@ -621,9 +621,11 @@ strong {
     border-radius: 20px;
     background: #ffffff;
     box-shadow: -10px 10px 20px 0 rgba(0, 0, 0, 0.40);
+    margin: auto;
 }
 
 .insuta {
+    /* Existing styles */
     display: flex;
     height: 100%;
     justify-content: center;
@@ -631,6 +633,10 @@ strong {
     gap: 10px;
     border-radius: 20px;
     background: linear-gradient(201deg, #7638FA 0%, #D300C5 25%, #FF0069 50%, #FF7A00 75%, #FFD600 100%);
+
+    /* ADD THIS LINE to create a thicker, visible gradient border */
+    /* Adjust the '10px' value to control the thickness (e.g., 5px, 15px, etc.) */
+    padding: 10px;
 }
 
 .SNS_container {
@@ -733,19 +739,84 @@ strong {
 
 /*ゲストトークショー*/
 .guests {
-    margin: 150px 200px;
+    display: flex;
+    width: 920px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    margin: 150px 18%;
 }
 
 .section_guest {
     display: flex;
-    height: 580px;
-    justify-content: center;
+    height: 833px;
+    padding: 50px;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
+    gap: 30px;
+    align-self: stretch;
     border-radius: 30px;
     background: #FFF;
     box-shadow: -10px 10px 20px 0 rgba(0, 0, 0, 0.40);
+}
+
+.guest_img {
+    width: 391px;
+    height: 563px;
+}
+
+.gesto_secion {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.guest_text {
+    color: #B15237;
+    text-align: right;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%;
+    width: 297px;
+}
+
+.guest_text_place {
+    align-self: stretch;
+    color: #B15237;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%;
+}
+
+.guest_text_list {
+    align-self: stretch;
+    color: #B15237;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    padding-left: 20px;
+}
+
+.gesto_reservation {
+    display: flex;
+    width: 660px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.button_container_guest {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    align-self: stretch;
 }
 
 /*実行委員会企画*/
