@@ -188,14 +188,14 @@ a {
 .card {
     background-image: url(../img/wave.png);
     padding: 50px;
-    width: 55%;
-    height: 644px;
+    width: 821px;
+    height: 610px;
     display: flex;
     flex-direction: column;
     /* justify-content: flex-start; */
     gap: 40px;
     color: #FFF;
-    margin: 200px 19%;
+    margin: 200px 18%;
 
 }
 
@@ -357,6 +357,93 @@ strong {
     background-color: #ffffff;
     border: 2px solid #EF832A;
     color: #EF832A;
+}
+
+.button_container_diagnosis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    background: #77C4DA;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button_container_diagnosis:hover {
+    background-color: #ffffff;
+    border: 2px solid #77C4DA;
+    color: #77C4DA;
+}
+
+.button_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+    background: #B15237;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.button_container:hover .button_icon {
+    background-color: #ffffff;
+    border: 2px solid #EF832A;
+    color: #EF832A;
+}
+
+.button_icon_diagnosis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+    background: #77C4DA;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.button_container:hover .button_icon_diagnosis {
+    background-color: #ffffff;
+    border: 2px solid #77C4DA;
+    color: #77C4DA;
+}
+
+.overlay_image {
+    top: -20px;
+    /* 上へのオフセットを調整 */
+    left: -30px;
+    /* 左へのオフセットを調整 */
+    width: 90px;
+    /* 画像の幅を調整 */
+    height: auto;
+    /* 高さは自動調整 */
+    z-index: 10;
+    object-fit: contain;
 }
 
 /* 展示・出店 */
