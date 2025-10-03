@@ -976,14 +976,14 @@ div.content {
     padding: 65px 0;
     margin: 0 auto;
     border-radius: 50px;
-    background: rgba(76, 107, 158, 0.70);
+    background: rgba(177, 82, 55, 0.70);
 }
 
 div.frame {
     width: 1080px;
     margin: 0 auto;
     border-radius: 30px;
-    background: #25344D;
+    background: #B15237;
 }
 
 /* ご挨拶ページ */
@@ -1087,4 +1087,7 @@ p.greeting_comment3 {
     font-weight: 400;
     line-height: 150%;
     grid-area: creatorp;
+}
+@media screen and (min-width:600px ) {
+    
 }
